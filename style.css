@@ -421,7 +421,7 @@ dialog {
         display: block;
         background-color: #272643;
         position: absolute;
-        right: 45px;
+        right: 10%;
         z-index: 1;
         width: 1em;
     }
@@ -473,4 +473,9 @@ dialog {
 }
 textarea {
     border: solid #BAE8E8 1px;
+}
+@media screen and (max-device-width:358px) {
+    #MenuIcon {
+        right: 20px;
+    }
 }
