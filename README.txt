@@ -1,0 +1,1 @@
+This code is for the first and main page of the project of SCRUM BOARD this code is mainly made of HTML javaScript and CSS . it still need to be done with bootstrap , tell then it need all the other parts of it to be done and appended to it.
