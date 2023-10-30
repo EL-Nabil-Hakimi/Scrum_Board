@@ -15,6 +15,14 @@
 main {
     height: calc( 100vh - 63px );
 }
+.dash {
+    height: fit-content;
+    margin-left: 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(240px,240px));
+    grid-auto-flow: column;gap: 10px;overflow-x: scroll;
+    height: 100%;
+}
 .task {
     width: 100%;
     height: fit-content;
@@ -25,6 +33,18 @@ main {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     outline: none;
     padding: 5px;
+    position: relative;
+    padding-right: 30px;
+}
+.dots {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 25px;
+}
+.dots:hover {
+    filter: drop-shadow(#ffffff 0px 0px 0px);
+    cursor: pointer;
 }
 .add {
     width: 100%;
@@ -46,7 +66,7 @@ main {
     outline: none;
 }
 .list {
-    width: 200px;
+    width: 240px;
     border: solid #272643;
     gap: 10px;
     background-color: #272643;
@@ -65,4 +85,20 @@ main {
     width: 25px;
     margin-right: 20px;
     cursor: pointer;
+}
+/*    Animations    */
+
+@keyframes pop-down {
+    0% {
+        min-height: 0px;
+        height: 0px;
+    }
+    90% {
+        min-height: 40px;
+        height: 40px;
+    }
+    100% {
+        height: fit-content;
+    }
+    
 }
