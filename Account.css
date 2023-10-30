@@ -1,0 +1,121 @@
+*{
+    margin-top: 0%;
+    padding: 0.25%;
+}
+
+
+:root{
+    --co-background:#272643;
+}
+
+
+.Account-name{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    height: fit-content;
+    background-color: var(--co-background);
+    width: 15%;
+    align-items: center;
+    height: 460px;
+    padding: 0%;
+    position: absolute;
+    border-radius: 5px;
+}
+
+.Account-name,
+.Elements{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.Elements{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: solid 0.5px white;
+    width: 95%;
+    font-size: 90%;
+    color: white;
+    padding: 0% 5%;
+    height: 52px;
+    border-bottom: none;
+}
+
+.Profile {
+    padding: 7%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Profile img{
+    width: 65%;
+    padding-top: 6%;
+    padding-bottom: 6%;
+}
+
+.Elements img{
+    width: 15%;
+    cursor: pointer;
+}
+
+
+@media (min-width: 810px) and (max-width:1000px){
+    
+    .Profile img{
+        width: 50%;
+    }
+    
+    .Account-name{
+        font-size: 80%;
+    }
+
+    .Account-name{
+        width: 25%;
+        max-height: 258px;
+    }
+
+    .Profile{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .Elements{
+        font-size: 85%;
+        height: 22px;
+    }
+    .Elements img{
+        width: 20px;
+    }
+    
+}
+    
+@media (min-width: 350px) and (max-width: 800px){
+
+    .Profile img{
+        width: 50%;
+    }
+    
+    .Account-name{
+        font-size: 50%;
+        width: 20%;
+        max-height: 215px;
+    }
+
+    .Profile{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .Elements{
+        font-size: 85%;
+        height: 25px;
+    }
+    .Elements img{
+        width: 10px;
+    }
+}
