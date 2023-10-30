@@ -1,0 +1,39 @@
+:root{
+    --backgroundColor:#272643;
+    --project-title:#2c698d;
+}
+.sideBar{
+    display: flex;
+    justify-content: flex-start;
+}
+.sideBar-body{
+    background-color: var(--backgroundColor);
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 20%;
+    height: 880px;
+    min-width: 375px;
+}
+.title{
+    color: white;
+    background-color: var(--project-title);
+    /* border: white solid 2px; */
+    border-radius: 10px;
+    margin: 10px;
+    text-align: center;
+    height: 50px;
+}
+.project-name{
+    color: white;
+    text-align: center;
+    border: white solid 1px;
+    border-radius: 10px;
+    margin: 20px;  
+}
+.button i{
+    position: absolute;
+    top: 150px;
+    left: 360px;
+    align-items: center;
+}
