@@ -8,7 +8,7 @@ function addCol(e) {
 }
 function addTask(e) {
     e.insertAdjacentHTML('beforebegin',`
-    <div onclick="showModal1()" class="task" contenteditable="true" spellcheck="false" style="animation-name:pop-down;animation-duration:0.2s;animation-timing-function:linear;">New task <img src="Assets/dots-3.png" class="dots" alt="" onclick="showModal1(this)"></div>
+    <div class="task" contenteditable="true" spellcheck="false" style="animation-name:pop-down;animation-duration:0.2s;animation-timing-function:linear;">New task <img src="Assets/dots-3.png" onclick="showModal1()" class="dots" alt="" onclick="showModal1(this)"></div>
     `)
 }
 function showModal1() {
