@@ -179,12 +179,12 @@ dialog {
 
 #Modale1{
     position: absolute;
-    display:block;
+    display:none;
     width: 100%;
     height: 100%;
     top: 0;
     background-color: transparent;
-    backdrop-filter: blur(5px);
+    /* backdrop-filter: blur(5px); */
 }
 
 .container{
@@ -372,6 +372,44 @@ dialog {
     display: none;
 }
 
+#ShowSideBar{
+    margin-top: 10px;
+    align-items: center;
+    width: 2em;
+    height: 2em;
+    background-color: #272643;
+    border-radius: 0px 50px 50px 0px;
+    color: white;
+    cursor: pointer;    
+    position: fixed;
+}
+
+#ShowSideBar img{
+    width: 90%;
+}
+
+#HideSideBar{
+    margin-top: 10px;
+    align-items: center;
+    width: 2em;
+    height: 2em;
+    background-color: #272643;
+    border-radius:50px;
+    color: white;
+    cursor: pointer;    
+    right: -15px;
+    top: 80px;
+    display: none;
+    align-items: center;
+    position: absolute;
+    border: 2px solid white;
+    justify-content: center;
+}
+#HideSideBar img{
+    width: 20px;
+
+}
+
 @media (min-width:560px){
     .container{
         width: 90vw;
@@ -463,6 +501,11 @@ dialog {
 }
 
 
+
+
+.sideBar-body{
+    display: none;
+}
 
 
 }
