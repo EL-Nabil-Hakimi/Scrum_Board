@@ -1,199 +1,287 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="Assets/planify-logo.png" type="image/x-icon">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="shortcut icon"
+      href="Assets/planify-logo.png"
+      type="image/x-icon"
+    />
     <script src="script.js" defer></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
     <title>Main page</title>
-</head>
-<body style="background-color: #BAE8E8;">
-    
-    <header class="d-flex p-2 justify-content-between align-items-center " style="background-color: #272643;">
-        <div class="d-flex ml-1 mr-3">
-            <img src="Assets/planify-logo.png" alt="" style="width: 40px;height: 40px;">
-            <h2 class="text-white ml-1">Planify</h2>
+  </head>
+  <body style="background-color: #bae8e8">
+    <header
+      class="d-flex p-2 justify-content-between align-items-center"
+      style="background-color: #272643"
+    >
+      <div class="d-flex ml-1 mr-3">
+        <img
+          src="Assets/planify-logo.png"
+          alt=""
+          style="width: 40px; height: 40px"
+        />
+        <h2 class="text-white ml-1">Planify</h2>
+      </div>
+      <!-- Zouhair's code  -->
+      <section class="Account-name">
+        <div class="Profile">
+          <img src="Assets/Default_ProfilePicture 1.png" alt="Profile" />
+          <div style="color: white">Account name</div>
         </div>
-        <!-- Zouhair's code  -->
-            <section class="Account-name">
-                <div class="Profile">
-                <img src="Assets/Default_ProfilePicture 1.png" alt="Profile">
-                <div style="color: white;">Account name</div>
-                </div>
-                <div class="Elements">
-                <span>Sign In</span><img src="Assets/image 17.png" alt="sign-in">
-                </div>
-                <div class="Elements">
-                <span>Sign Up</span><img src="Assets/image 18.png" alt="sign-up">
-                </div>
-                <div class="Elements">
-                <span>Themes</span><img src="Assets/image 19.png" alt="sign-in">
-                </div>
-                <div class="Elements">
-                <span>Settings</span><img src="Assets/image 20.png" alt="sign-in">
-                </div>
-                <div class="Elements">
-                <span>Contact</span><img src="Assets/image 21.png" alt="sign-in">
-                </div>
-                <div class="Elements" style="border-bottom: solid 0.2px;">
-                <span>Log out</span><img src="Assets/image 22.png" alt="sign-in">
-                </div>
-            </section>
-        <!-- end -->    
-        <img onclick="show_hide_Account()" src="Assets/image 1.svg" alt="" style="width: 35px;height: 35px;" class="ml-3 mr-3">
+        <div class="Elements">
+          <span>Sign In</span><img src="Assets/image 17.png" alt="sign-in" />
+        </div>
+        <div class="Elements">
+          <span>Sign Up</span><img src="Assets/image 18.png" alt="sign-up" />
+        </div>
+        <div class="Elements">
+          <span>Themes</span><img src="Assets/image 19.png" alt="sign-in" />
+        </div>
+        <div class="Elements">
+          <span>Settings</span><img src="Assets/image 20.png" alt="sign-in" />
+        </div>
+        <div class="Elements">
+          <span>Contact</span><img src="Assets/image 21.png" alt="sign-in" />
+        </div>
+        <div class="Elements" style="border-bottom: solid 0.2px">
+          <span>Log out</span><img src="Assets/image 22.png" alt="sign-in" />
+        </div>
+      </section>
+      <!-- end -->
+      <img
+        onclick="show_hide_Account()"
+        src="Assets/image 1.svg"
+        alt=""
+        style="width: 35px; height: 35px"
+        class="ml-3 mr-3"
+      />
     </header>
     <main id="main">
-        <!--Khalid's code-->
-        <section class="d-flex flex-row">
-            <div id="ShowSideBar">
-                <img src="Assets/right.png" alt="" srcset="">
-            </div>
-            <div class="sideBar-body">
-
-
-                <div id="HideSideBar">
-                    <img src="Assets/left.png" alt="" srcset="">
-                </div>
-                <div class="title" contenteditable="true" spellcheck="false">
-                    List of Projects
-                </div>
-                <div class="project-name" contenteditable="true" spellcheck="false">
-                    Project N1
-                </div>
-                <div class="project-name" contenteditable="true" spellcheck="false">
-                    Project N2
-                </div>
-                <div class="project-name" contenteditable="true" spellcheck="false">
-                    Project N3
-                </div>
-                <div class="project-name" contenteditable="true" spellcheck="false">
-                    Project N3
-                </div>
-                <div class="add-project">
-                    Add An Other Project <img src="Assets/plus.svg" alt="" class="plus">
-                </div>
-            </div>
-            <div class="button">
-                <i class="fa-sharp fa-solid fa-circle-chevron-left fa-4x border rounded-circle" style="color: #272643;"></i>
-            </div> 
-        </section>
-        <!--end-->
-        <section class="dash">
-            <div class="list" draggable="true">
-                <div class="list-name" contenteditable="true" spellcheck="false">To Do</div>
-                <div  class="task" contenteditable="true" spellcheck="false">task 1 <img onclick="showModal1()" src="Assets/dots-3.png" class="dots" alt="" onclick="showModal1(this)"></div>
-                <div class="task" contenteditable="true" spellcheck="false">task 2 <img onclick="showModal1()" src="Assets/dots-3.png" class="dots" alt="" onclick="showModal1(this)"></div>
-                <div class="task" contenteditable="true" spellcheck="false">task 3 <img onclick="showModal1()" src="Assets/dots-3.png" class="dots" alt="" onclick="showModal1(this)"></div>
-                <div class="add"><img src="Assets/plus.svg" alt="" class="plus" onclick="addTask(this.parentNode)"></div>
-            </div>
-            <div class="list" draggable="true">
-                <div class="list-name" contenteditable="true" spellcheck="false">To Do</div>
-                <div class="add"><img src="Assets/plus.svg" alt="" class="plus" onclick="addTask(this.parentNode)"></div>
-            </div>
-            <div class="list" draggable="true">
-                <div class="add"><img src="Assets/plus.svg" alt="" class="plus" onclick="addCol(this.parentNode.parentNode)"></div>
-            </div>
-        </section>
+      <!--Khalid's code-->
+      <section class="d-flex flex-row">
+        <div id="ShowSideBar">
+          <img src="Assets/right.png" alt="" srcset="" />
+        </div>
+        <div class="sideBar-body">
+          <div id="HideSideBar">
+            <img src="Assets/left.png" alt="" srcset="" />
+          </div>
+          <div class="title" contenteditable="true" spellcheck="false">
+            List of Projects
+          </div>
+          <div class="project-name" contenteditable="true" spellcheck="false">
+            Project N1
+          </div>
+          <div class="project-name" contenteditable="true" spellcheck="false">
+            Project N2
+          </div>
+          <div class="project-name" contenteditable="true" spellcheck="false">
+            Project N3
+          </div>
+          <div class="project-name" contenteditable="true" spellcheck="false">
+            Project N3
+          </div>
+          <div class="add-project">
+            Add An Other Project
+            <img src="Assets/plus.svg" alt="" class="plus" />
+          </div>
+        </div>
+        <div class="button">
+          <i
+            class="fa-sharp fa-solid fa-circle-chevron-left fa-4x border rounded-circle"
+            style="color: #272643"
+          ></i>
+        </div>
+      </section>
+      <!--end-->
+      <section class="dash">
+        <div class="list" draggable="true">
+          <div class="list-name" contenteditable="true" spellcheck="false">
+            To Do
+          </div>
+          <div class="task" contenteditable="true" spellcheck="false">
+            task 1
+            <img
+              onclick="showModal1()"
+              src="Assets/dots-3.png"
+              class="dots"
+              alt=""
+              onclick="showModal1(this)"
+            />
+          </div>
+          <div class="task" contenteditable="true" spellcheck="false">
+            task 2
+            <img
+              onclick="showModal1()"
+              src="Assets/dots-3.png"
+              class="dots"
+              alt=""
+              onclick="showModal1(this)"
+            />
+          </div>
+          <div class="task" contenteditable="true" spellcheck="false">
+            task 3
+            <img
+              onclick="showModal1()"
+              src="Assets/dots-3.png"
+              class="dots"
+              alt=""
+              onclick="showModal1(this)"
+            />
+          </div>
+          <div class="add">
+            <img
+              src="Assets/plus.svg"
+              alt=""
+              class="plus"
+              onclick="addTask(this.parentNode)"
+            />
+          </div>
+        </div>
+        <div class="list" draggable="true">
+          <div class="list-name" contenteditable="true" spellcheck="false">
+            To Do
+          </div>
+          <div class="add">
+            <img
+              src="Assets/plus.svg"
+              alt=""
+              class="plus"
+              onclick="addTask(this.parentNode)"
+            />
+          </div>
+        </div>
+        <div class="list" draggable="true">
+          <div class="add">
+            <img
+              src="Assets/plus.svg"
+              alt=""
+              class="plus"
+              onclick="addCol(this.parentNode.parentNode)"
+            />
+          </div>
+        </div>
+      </section>
     </main>
-    
-    <footer>
-
-    </footer>
-
-
     <dialog id="Modale1">
-        <div class="d-flex justify-content-center align-items-center" style="width: 100%; height: 100vh;">
-            <div class="container" id="contain-important">
-                <div class="row">
-                    <!-- Column 2 -->
-                    <div class="col-7">
-                    <div id="HeaderModale">
-                        <h1><span>Task</span> Name</h1>
-                        <img class="imgClose1" src="Assets/close.png" alt="Close">
-                    </div>
-                    <div class="row gap-2" style="margin-left: 0px; margin-top: 1em;" >
-                        <div class="col-3"></div>
-                        <div class="col-3"></div>
-                        <div class="col-3"></div>
-                        <div class="col-3" id="MenuIcon">
-                            <img src="Assets/menu.png" alt="" srcset="">
-                        </div>
-                    </div>
-                    <div class="Description" id="Description">
-                        <div>
-                            <h3>Description</h3>
-                        </div>
-                        <textarea></textarea>
-                    </div>
-                    <div class="Description">
-                        <div class="dv_CheckList">
-                            <h3>CheckList</h3>
-                            <img src="Assets/plus.png" alt="" srcset="" onclick="hideModal1()">
-                        </div>
-                        <div class="CheckList">
-                            <div><input type="checkbox">Reference site about Lorem</div>
-                            <div><input type="checkbox">Reference site about Lorem</div>
-                            <div><input type="checkbox">Reference site about Lorem</div>
-                            <div><input type="checkbox">Reference site about Lorem</div>
-                        </div>
-                    </div>
-                  </div>
-                  <!-- Column 2 -->
-                  <div class="col-5">
-                    <div class="col-12" style="width: 100%; height: 1.2em;  margin-bottom: 15px;" >
-                        <img class="imgClose" src="Assets/close.png" alt="Close" onclick=" hideModal1()">
-                    </div>
-                    <br>
-                <div class="Div_Tools">
-                    <div class="row" id="row_Tools" >
-                        <div class="col-8">
-                            <h3>Tools</h3>
-                        </div>
-                        <div class="col-4">
-                            <img class="ImgTools" src="Assets/tools.png">
-                        </div>
-                    </div>
-                    <div class="MenuTools">
-                        <div>
-                            <h4>Date</h4>
-                        </div>
-                        <div>
-                            <img src="Assets/date.png" alt="" srcset="">
-                        </div>
-                    </div>
-                    <div class="MenuTools">
-                        <div>
-                            <h4>CheckList</h4>
-                        </div>
-                        <div>
-                            <img src="Assets/checklest.png" alt="" srcset="">
-                        </div>
-                    </div>
-                    <div class="MenuTools">
-                        <div>
-                            <h4>Label</h4>
-                        </div>
-                        <div>
-                            <img src="Assets/label.png" alt="" srcset="">
-                        </div>
-                    </div>
-                    <div class="MenuTools" id="Delete">
-                        <div>
-                            <h4>Delete</h4>
-                        </div>
-                        <div>
-                            <img src="Assets/delete.png" alt="" srcset="">
-                        </div>
-                    </div>
-                </div>            
-                </div>     
-                  </div>
+      <div
+        class="d-flex justify-content-center align-items-center"
+        style="width: 100%; height: 100vh"
+      >
+        <div class="container" id="contain-important">
+          <div class="row">
+            <!-- Column 2 -->
+            <div class="col-7">
+              <div id="HeaderModale">
+                <h1><span>Task</span> Name</h1>
+                <img class="imgClose1" src="Assets/close.png" alt="Close" />
+              </div>
+              <div class="row gap-2" style="margin-left: 0px; margin-top: 1em">
+                <div class="col-3"></div>
+                <div class="col-3"></div>
+                <div class="col-3"></div>
+                <div class="col-3" id="MenuIcon">
+                  <img src="Assets/menu.png" alt="" srcset="" />
                 </div>
               </div>
-         </div>
+              <div class="Description" id="Description">
+                <div>
+                  <h3>Description</h3>
+                </div>
+                <textarea></textarea>
+              </div>
+              <div class="Description">
+                <div class="dv_CheckList">
+                  <h3>CheckList</h3>
+                  <img
+                    src="Assets/plus.png"
+                    alt=""
+                    srcset=""
+                    onclick="hideModal1()"
+                  />
+                </div>
+                <div class="CheckList">
+                  <div><input type="checkbox" />Reference site about Lorem</div>
+                  <div><input type="checkbox" />Reference site about Lorem</div>
+                  <div><input type="checkbox" />Reference site about Lorem</div>
+                  <div><input type="checkbox" />Reference site about Lorem</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Column 2 -->
+          <div class="col-5">
+            <div
+              class="col-12"
+              style="width: 100%; height: 1.2em; margin-bottom: 15px"
+            >
+              <img
+                class="imgClose"
+                src="Assets/close.png"
+                alt="Close"
+                onclick=" hideModal1()"
+              />
+            </div>
+            <br />
+            <div class="Div_Tools">
+              <div class="row" id="row_Tools">
+                <div class="col-8">
+                  <h3>Tools</h3>
+                </div>
+                <div class="col-4">
+                  <img class="ImgTools" src="Assets/tools.png" />
+                </div>
+              </div>
+              <div class="MenuTools">
+                <div>
+                  <h4>Date</h4>
+                </div>
+                <div>
+                  <img src="Assets/date.png" alt="" srcset="" />
+                </div>
+              </div>
+              <div class="MenuTools">
+                <div>
+                  <h4>CheckList</h4>
+                </div>
+                <div>
+                  <img src="Assets/checklest.png" alt="" srcset="" />
+                </div>
+              </div>
+              <div class="MenuTools">
+                <div>
+                  <h4>Label</h4>
+                </div>
+                <div>
+                  <img src="Assets/label.png" alt="" srcset="" />
+                </div>
+              </div>
+              <div class="MenuTools" id="Delete">
+                <div>
+                  <h4>Delete</h4>
+                </div>
+                <div>
+                  <img src="Assets/delete.png" alt="" srcset="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </dialog>
-</body>
+  </body>
 </html>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+  integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+  crossorigin="anonymous"
+></script>
