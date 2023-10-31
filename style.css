@@ -517,3 +517,128 @@ dialog {
 textarea {
     border: solid #BAE8E8 1px;
 }
+
+
+/* zouahir: Account  */
+:root{
+    --co-background:#272643;
+}
+
+
+.Account-name{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    height: fit-content;
+    background-color: var(--co-background);
+    width: 18%;
+    align-items: center;
+    height: 460px;
+    padding: 0%;
+    position: absolute;
+    right: 5px;
+    top: 62px;
+    z-index: 10;
+    display: none;
+}
+
+.Account-name,
+.Elements{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.Elements{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: solid 0.5px white;
+    width: 96%;
+    font-size: 90%;
+    color: white;
+    padding: 0% 5%;
+    height: 50px;
+    border-bottom: none;
+    cursor: pointer;
+}
+
+.Profile {
+    padding: 7%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Profile img{
+    width: 65%;
+    padding-top: 6%;
+    padding-bottom: 6%;
+}
+
+.Elements img{
+    width: 15%;
+}
+
+
+
+@media (min-width: 700px) and (max-width:1400px){
+    
+    .Profile img{
+        width: 70%;
+    }
+    
+    .Account-name{
+        font-size: 90%;
+    }
+
+    .Account-name{
+        width: 35%;
+        height: 450px;
+    }
+
+    .Profile{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 100%;
+    }
+    
+    .Elements{
+        font-size: 120%;
+        height: 48px;
+        width: 95%;
+    }
+    .Elements img{
+        width: 40px;
+    }
+    
+}
+    
+@media (min-width: 350px) and (max-width: 700px){
+
+    .Profile img{
+        width: 50%;
+    }
+    
+    .Account-name{
+        font-size: 80%;
+        width: 45%;
+        height: 320px;
+    }
+
+    .Profile{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .Elements{
+        font-size: 85%;
+        height:33px;
+        width: 85%;
+    }
+    .Elements img{
+        width: 20px;
+    }
+}

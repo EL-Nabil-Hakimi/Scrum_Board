@@ -23,3 +23,13 @@ function hideModal1() {
     Modale.style.display="none"
     Modale.style.backdropFilter ="blur(0px)";
 }
+
+// Zouhair : Account_Name
+
+function show_hide_Account(){
+    const Account = document.querySelector(".Account-name");
+    if(Account.style.display == "none"){
+        Account.style.display = "flex";
+    }
+    else{Account.style.display = "none";}
+}
