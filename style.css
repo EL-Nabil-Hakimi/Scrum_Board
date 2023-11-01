@@ -438,14 +438,14 @@ dialog {
     min-width: 100%;
   }
 
-  .Div_Tools {
-    z-index: 10;
-    position: absolute;
-    height: 2px;
+  .Div_Tools{
+    height: 230px;
     right: 12px;
-    display: block;
-    
-  }
+    margin-right: 30px;
+    margin-top: 110px;
+    position: absolute;
+    display: none;
+}
 
   #MenuIcon {
     display: block;
