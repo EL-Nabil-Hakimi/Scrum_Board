@@ -40,6 +40,7 @@ function show_hide_Account() {
   }
 }
 
+<<<<<<< HEAD
 // Fonction pour ajouter un tableau
 function addTable() {
   const Project = document.querySelector(".project-name");
@@ -48,3 +49,26 @@ function addTable() {
 </div> `)
 }
 
+=======
+
+function addCheckList() {
+  var e = document.querySelector("#checklest1")
+  e.insertAdjacentHTML(
+    "beforebegin",
+    `
+    <div id="checklest1"><input type="checkbox"><span contenteditable>Tache ...</span></div>
+    `
+  );
+}
+
+
+function showTools(){
+  var show = document.querySelector(".Div_Tools");
+  if (show.style.display == "none") {
+    show.style.display = "block";
+  } else {
+    show.style.display = "none";
+  }
+
+}
+>>>>>>> d70d81932f6e36a162e7dff73e90cd52668f15ed

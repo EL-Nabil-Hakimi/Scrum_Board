@@ -320,12 +320,16 @@ dialog {
   background-color: #272643;
   color: white;
   width: 100%;
+
+  
 }
+
 
 .CheckList div {
   display: flex;
   margin: 10px 0px;
   gap: 5px;
+
 }
 
 .CheckList div input {
@@ -334,7 +338,11 @@ dialog {
   background-color: white;
   cursor: pointer;
 }
+#CheckList{
+  max-height:200px;
+  overflow-y: scroll;
 
+}
 .dv_CheckList {
   display: flex;
   justify-content: space-between;
@@ -346,6 +354,17 @@ dialog {
   width: 2em;
 }
 
+
+#CheckList::-webkit-scrollbar {
+  width: 5px;
+  height: 10px;
+  background-color: transparent;
+}
+#CheckList::-webkit-scrollbar-thumb {
+  background-color: #bae8e8;
+  height: 10px;
+  border-radius: 10px;
+}
 .imgClose1 {
   display: none;
 }
@@ -420,10 +439,12 @@ dialog {
   }
 
   .Div_Tools {
+    z-index: 10;
     position: absolute;
-    height: 230px;
+    height: 2px;
     right: 12px;
-    display: none;
+    display: block;
+    
   }
 
   #MenuIcon {
@@ -598,3 +619,13 @@ textarea {
     width: 20px;
   }
 }
+
+#checklest1 span{
+  width: 90%;
+  border: none;
+  outline: none;
+}
+
+
+
+
