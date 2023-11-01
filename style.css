@@ -451,7 +451,7 @@ dialog {
     display: block;
     background-color: #272643;
     position: absolute;
-    right: 45px;
+    right: 25px;
     z-index: 1;
     width: 1em;
   }
