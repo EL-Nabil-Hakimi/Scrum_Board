@@ -68,3 +68,27 @@ function addTable() {
   Project...
 </div> `)
 }
+
+// show sideBar In mobile
+
+function ShowSideBar() {
+  var ShowSideBar = document.querySelector("#ShowSideBar");
+  var hideSideBar = document.querySelector("#HideSideBar");
+  var sideBarBody = document.querySelector(".sideBar-body");
+
+  hideSideBar.style.display = "block";
+  sideBarBody.style.display = "block"; 
+  ShowSideBar.style.display = "none";
+};
+
+function HideSideBar() {
+  var ShowSideBar = document.querySelector("#ShowSideBar");
+  var hideSideBar = document.querySelector("#HideSideBar");
+  var sideBarBody = document.querySelector(".sideBar-body");   
+
+  hideSideBar.style.display = "none";
+  sideBarBody.style.display = "none"; 
+  ShowSideBar.style.display = "block";
+  
+}; 
+
