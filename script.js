@@ -39,3 +39,12 @@ function show_hide_Account() {
     Account.style.display = "none";
   }
 }
+
+// Fonction pour ajouter un tableau
+function addTable() {
+  const Project = document.querySelector(".project-name");
+  Project.insertAdjacentHTML( "afterend", ` <div class="project-name" contenteditable="true" spellcheck="false">
+  Project...
+</div> `)
+}
+
