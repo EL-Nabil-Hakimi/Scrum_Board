@@ -61,3 +61,10 @@ function showTools(){
   }
 
 }
+// Ajouter fonction qui ajoute un table 
+function addTable() {
+  const Project = document.querySelector(".project-name");
+  Project.insertAdjacentHTML( "afterend", ` <div class="project-name" contenteditable="true" spellcheck="false">
+  Project...
+</div> `)
+}
