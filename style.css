@@ -439,10 +439,12 @@ dialog {
   }
 
   .Div_Tools {
+    z-index: 10;
     position: absolute;
-    height: 230px;
+    height: 2px;
     right: 12px;
-    display: none;
+    display: block;
+    
   }
 
   #MenuIcon {
