@@ -83,6 +83,7 @@ header
     position: relative;
     bottom: 50px;
     border: black;
+    text-decoration: none;
 }
 .btn
 {
@@ -96,10 +97,18 @@ header
     font-size: 1.5rem;
     margin-top: -75px;
     user-select: none;
+    text-decoration: none;
+   
 } 
 .btn:hover 
 {
     background-color:#62a2ca;
+   
+}
+#BtnGet .btn a {
+    text-decoration: none; 
+    color: white;
+    text-decoration: none;
 }
 footer{
     margin-top: 5em;
