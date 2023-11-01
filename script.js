@@ -40,6 +40,16 @@ function show_hide_Account() {
   }
 }
 
+<<<<<<< HEAD
+// Fonction pour ajouter un tableau
+function addTable() {
+  const Project = document.querySelector(".project-name");
+  Project.insertAdjacentHTML( "afterend", ` <div class="project-name" contenteditable="true" spellcheck="false">
+  Project...
+</div> `)
+}
+
+=======
 
 function addCheckList() {
   var e = document.querySelector("#checklest1")
@@ -61,3 +71,4 @@ function showTools(){
   }
 
 }
+>>>>>>> d70d81932f6e36a162e7dff73e90cd52668f15ed
