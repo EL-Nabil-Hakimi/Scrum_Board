@@ -39,3 +39,14 @@ function show_hide_Account() {
     Account.style.display = "none";
   }
 }
+
+
+function addCheckList() {
+  var e = document.querySelector("#checklest1")
+  e.insertAdjacentHTML(
+    "beforebegin",
+    `
+    <div id="checklest1"><input type="checkbox"><span contenteditable>Tache ...</span></div>
+    `
+  );
+}
