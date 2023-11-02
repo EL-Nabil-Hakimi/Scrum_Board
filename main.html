@@ -52,16 +52,15 @@
                 <img src="Assets/right.png" alt="" srcset="">
             </div>
             <div class="sideBar-body">
-
-
                 <div id="HideSideBar" onclick="HideSideBar()">
                     <img src="Assets/left.png" alt="" srcset="">
                 </div>
                 <div class="title" contenteditable="true" spellcheck="false">
                     List of Projects
                 </div>
-                <div class="project-name" contenteditable="true" spellcheck="false">
-                    Project...
+                <div class="project-name current" spellcheck="false" onclick="saveData(this)" id="p-1">
+                    <p class="projectName" contenteditable="true">Project...</p>
+                    <img src="Assets/dots-3.png" alt="" class="dots">
                 </div>
                 <div class="add-project">
                     Add An Other Project <img src="Assets/plus.svg" alt="" class="plus" onclick="addTable()">
@@ -73,18 +72,22 @@
         </section>
         <!--end-->
         <section class="dash">
-            <div class="list" draggable="true">
+            <div class="list">
                 <div class="list-name" contenteditable="true" spellcheck="false">To Do</div>
-                <div  class="task" contenteditable="true" spellcheck="false">task 1 <img onclick="showModal1()" src="Assets/dots-3.png" class="dots" alt="" onclick="showModal1(this)"></div>
-                <div class="task" contenteditable="true" spellcheck="false">task 2 <img onclick="showModal1()" src="Assets/dots-3.png" class="dots" alt="" onclick="showModal1(this)"></div>
-                <div class="task" contenteditable="true" spellcheck="false">task 3 <img onclick="showModal1()" src="Assets/dots-3.png" class="dots" alt="" onclick="showModal1(this)"></div>
-                <div class="add"><img src="Assets/plus.svg" alt="" class="plus" onclick="addTask(this.parentNode)"></div>
+                <div class="list-tasks" id="list-1">
+                    <div  class="task" spellcheck="false" draggable="true"><p class="task-text" contenteditable="true">task 1 </p><img onclick="showModal1()" src="Assets/dots-3.png" class="dots" alt="" onclick="showModal1(this)"></div>
+                    <div class="task" spellcheck="false" draggable="true"><p class="task-text" contenteditable="true">task 2 </p><img onclick="showModal1()" src="Assets/dots-3.png" class="dots" alt="" onclick="showModal1(this)"></div>
+                    <div class="task" spellcheck="false" draggable="true"><p class="task-text" contenteditable="true">task 3 </p><img onclick="showModal1()" src="Assets/dots-3.png" class="dots" alt="" onclick="showModal1(this)"></div>
+                </div>
+                <div class="add"><img src="Assets/plus.svg" alt="" class="plus" onclick="addTask(this.parentNode.previousElementSibling)"></div>
             </div>
-            <div class="list" draggable="true">
+            <div class="list">
                 <div class="list-name" contenteditable="true" spellcheck="false">To Do</div>
-                <div class="add"><img src="Assets/plus.svg" alt="" class="plus" onclick="addTask(this.parentNode)"></div>
+                <div class="list-tasks"></div>
+                <div class="add"><img src="Assets/plus.svg" alt="" class="plus" onclick="addTask(this.parentNode.previousElementSibling)"></div>
             </div>
-            <div class="list" draggable="true">
+            <div class="list">
+                <div class="list-tasks"></div>
                 <div class="add"><img src="Assets/plus.svg" alt="" class="plus" onclick="addCol(this.parentNode.parentNode)"></div>
             </div>
         </section>
@@ -93,8 +96,6 @@
     <footer>
 
     </footer>
-
-
     <dialog id="Modale1">
         <div class="d-flex justify-content-center align-items-center" style="width: 100%; height: 100vh;">
             <div class="container" id="contain-important">

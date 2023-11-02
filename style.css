@@ -2,6 +2,9 @@
   margin: 0px;
   padding: 0px;
 }
+html {
+  font-family: viga;
+}
 #main {
   display: flex;
 }
@@ -22,6 +25,7 @@
   align-items: center;
   justify-content: flex-end;
   gap: 10px;
+  cursor: pointer;
 }
 main {
   height: calc(100vh - 63px);
@@ -43,11 +47,18 @@ main {
   border-radius: 5px;
   border: solid 1px #bae8e8;
   color: #bae8e8;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Viga;
   outline: none;
   padding: 5px;
   position: relative;
   padding-right: 30px;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.task-text {
+  cursor: text;
 }
 .dots {
   position: absolute;
@@ -76,8 +87,14 @@ main {
   align-items: center;
   justify-content: center;
   color: #272643;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Viga;
   outline: none;
+}
+.list-tasks {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
 }
 .list {
   width: 240px;
@@ -94,6 +111,7 @@ main {
   padding: 10px;
   padding-bottom: 0;
   height: fit-content;
+  overflow: hidden;
 }
 .plus {
   width: 25px;
@@ -157,6 +175,9 @@ main {
   min-height: 60px;
   padding: 10px 5px;
   outline: none;
+  cursor: pointer;
+  padding-right: 35px;
+  position: relative;
 }
 .button i {
   position: absolute;
@@ -207,7 +228,6 @@ dialog {
 }
 
 .imgClose:hover {
-  transform: rotate(8deg);
   background-color: #fa5a5a;
   border-radius: 5px;
   opacity: 1;
@@ -524,7 +544,7 @@ textarea {
 
 .Account-name,
 .Elements {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Viga;
 }
 
 .Elements {
@@ -623,7 +643,14 @@ textarea {
   border: none;
   outline: none;
 }
-
-
-
+* {
+  font-family: viga;
+}
+.projectName {
+  cursor: text
+}
+.current {
+  box-shadow:#272643 0 0 0 2px, #2c698d 0 0 0 4px;
+  transform: scale(1.05);
+}
 

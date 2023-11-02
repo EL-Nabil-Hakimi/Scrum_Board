@@ -1,19 +1,33 @@
+//those are global variables for the countf of number of tasks and number of tables.
+
+let countOfTables = 1;
+
+let countOfCurrentTasks = 3;
+
+let countOfCurrentColumns = 2;
+
+//end of global vars;
+
+
 function addCol(e) {
+  countOfCurrentColumns++;
   e.insertAdjacentHTML(
     "beforebegin",
     `
-        <div class="list" draggable="true" style="animation-name:pop-down;animation-duration:0.2s;animation-timing-function:linear;">
-            <div class="list-name" contenteditable="true" spellcheck="false">To Do</div>
-            <div class="add"><img src="Assets/plus.svg" alt="" class="plus" onclick="addTask(this.parentNode)"></div>
-        </div>
+  <div class="list">
+      <div class="list-name" contenteditable="true" spellcheck="false">To Do</div>
+      <div class="list-tasks"></div>
+      <div class="add"><img src="Assets/plus.svg" alt="" class="plus" onclick="addTask(this.parentNode.previousElementSibling)"></div>
+  </div>
     `
   );
 }
 function addTask(e) {
+  countOfCurrentTasks++;
   e.insertAdjacentHTML(
-    "beforebegin",
+    "beforeend",
     `
-    <div class="task" contenteditable="true" spellcheck="false" style="animation-name:pop-down;animation-duration:0.2s;animation-timing-function:linear;">New task <img src="Assets/dots-3.png" onclick="showModal1()" class="dots" alt="" onclick="showModal1(this)"></div>
+    <div class="task" id="t-${countOfCurrentTasks}" spellcheck="false" draggable="true" style="animation-name:pop-down;animation-duration:0.2s;animation-timing-function:linear;"><p contenteditable="true" class="task-text">New task </p><img src="Assets/dots-3.png" onclick="showModal1()" class="dots" alt="" onclick="showModal1(this)"></div>
     `
   );
 }
@@ -61,12 +75,15 @@ function showTools(){
   }
 
 }
-// Ajouter fonction qui ajoute un table 
+// Ajouter fonction qui ajoute un table .
 function addTable() {
+  countOfTables++;
   const Project = document.querySelector(".project-name");
-  Project.insertAdjacentHTML( "afterend", ` <div class="project-name" contenteditable="true" spellcheck="false">
-  Project...
-</div> `)
+  Project.insertAdjacentHTML( "afterend", ` 
+  <div class="project-name" spellcheck="false" onclick="saveData(this)" id="p-1">
+    <p class="projectName" contenteditable="true">Project...</p>
+    <img src="Assets/dots-3.png" alt="" class="dots">
+  </div> `)
 }
 
 // show sideBar In mobile
@@ -91,4 +108,8 @@ function HideSideBar() {
   ShowSideBar.style.display = "block";
   
 }; 
-
+ function saveData(el) {
+  let id = el.id;
+  let num = id.match(/(\d+)/)[0];
+  console.log(num);
+ }
