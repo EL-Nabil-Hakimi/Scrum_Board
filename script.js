@@ -108,6 +108,38 @@ function HideSideBar() {
   ShowSideBar.style.display = "block";
   
 }; 
+let lists = document.querySelectorAll(".task"); 
+let boxes = document.querySelectorAll(".list-tasks"); 
+let drag = null;
+
+lists.forEach(list => {
+    list.addEventListener("dragstart", function(e) {
+        drag = list;
+        list.style.opacity = "0.5";
+    });
+
+    list.addEventListener("dragend", function() {
+        drag = null;
+        list.style.opacity = "1";
+    });
+
+    boxes.forEach(boxe => {
+        boxe.addEventListener("dragover", function(e) {
+            e.preventDefault();
+        });
+
+        boxe.addEventListener("dragleave", function() {
+            this.style.background = "#0b0423"; 
+        });
+
+        boxe.addEventListener("drop", function() {
+            if (drag) {
+                this.appendChild(drag);
+            }
+        });
+    });
+});
+
  function saveData(el) {
   let id = el.id;
   let num = id.match(/(\d+)/)[0];

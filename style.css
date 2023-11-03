@@ -57,9 +57,6 @@ main {
   border-radius: 5px;
   overflow: hidden;
 }
-.task-text {
-  cursor: text;
-}
 .dots {
   position: absolute;
   top: 5px;
