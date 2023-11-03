@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="sortScript.js" type="module"></script>
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="Assets/planify-logo.png" type="image/x-icon">
-    <script src="script.js" defer></script>
     <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css">
     <link href='https://fonts.googleapis.com/css?family=Viga' rel='stylesheet'>
     <title>Main page</title>
@@ -71,33 +72,36 @@
             </div> 
         </section>
         <!--end-->
-        <section class="dash">
+        <section class="dash" id="dash">
             <div class="list">
                 <div class="list-name" contenteditable="true" spellcheck="false">To Do</div>
-                    <div class="list-tasks" id="list-1">
-                        <div  class="task" spellcheck="false" draggable="true"><p contenteditable="true">task 1 </p><img onclick="showModal1()" src="Assets/dots-3.png" class="dots" alt="" onclick="showModal1(this)"></div>
-                        <div class="task" spellcheck="false" draggable="true"><p contenteditable="true">task 2 </p><img onclick="showModal1()" src="Assets/dots-3.png" class="dots" alt="" onclick="showModal1(this)"></div>
-                        <div class="task" spellcheck="false" draggable="true"><p contenteditable="true">task 3 </p><img onclick="showModal1()" src="Assets/dots-3.png" class="dots" alt="" onclick="showModal1(this)"></div>
+                    <div class="list-tasks">
+                        <div class="task" spellcheck="false"><p contenteditable="true">task 1</p><img onclick="showModal1()" src="Assets/dots-3.png" class="dots" alt="" onclick="showModal1(this)"></div>
+                        <div class="task" spellcheck="false"><p contenteditable="true">task 2</p><img onclick="showModal1()" src="Assets/dots-3.png" class="dots" alt="" onclick="showModal1(this)"></div>
+                        <div class="task" spellcheck="false"><p contenteditable="true">task 3</p><img onclick="showModal1()" src="Assets/dots-3.png" class="dots" alt="" onclick="showModal1(this)"></div>
                     </div>
                 <div class="add"><img src="Assets/plus.svg" alt="" class="plus" onclick="addTask(this.parentNode.previousElementSibling)"></div>
             </div>
             <div class="list">
-                <div class="list-name" contenteditable="true" spellcheck="false">To Do</div>
-                    <div class="list-tasks" id="list-1">
-                        <div  class="task" spellcheck="false" draggable="true"><p contenteditable="true">task 1 </p><img onclick="showModal1()" src="Assets/dots-3.png" class="dots" alt="" onclick="showModal1(this)"></div>
-                        <div class="task" spellcheck="false" draggable="true"><p contenteditable="true">task 2 </p><img onclick="showModal1()" src="Assets/dots-3.png" class="dots" alt="" onclick="showModal1(this)"></div>
-                        <div class="task" spellcheck="false" draggable="true"><p contenteditable="true">task 3 </p><img onclick="showModal1()" src="Assets/dots-3.png" class="dots" alt="" onclick="showModal1(this)"></div>
+                <div class="list-name" contenteditable="true" spellcheck="false">Doing</div>
+                    <div class="list-tasks">
+                        <div class="task" spellcheck="false"><p contenteditable="true">task 1</p><img onclick="showModal1()" src="Assets/dots-3.png" class="dots" alt="" onclick="showModal1(this)"></div>
+                        <div class="task" spellcheck="false"><p contenteditable="true">task 2</p><img onclick="showModal1()" src="Assets/dots-3.png" class="dots" alt="" onclick="showModal1(this)"></div>
+                        <div class="task" spellcheck="false"><p contenteditable="true">task 3</p><img onclick="showModal1()" src="Assets/dots-3.png" class="dots" alt="" onclick="showModal1(this)"></div>
                     </div>
                 <div class="add"><img src="Assets/plus.svg" alt="" class="plus" onclick="addTask(this.parentNode.previousElementSibling)"></div>
             </div>
             <div class="list">
-                <div class="list-name" contenteditable="true" spellcheck="false">To Do</div>
-                    <div class="list-tasks" id="list-1">
-                        <div  class="task" spellcheck="false" draggable="true"><p contenteditable="true">task 1 </p><img onclick="showModal1()" src="Assets/dots-3.png" class="dots" alt="" onclick="showModal1(this)"></div>
-                        <div class="task" spellcheck="false" draggable="true"><p contenteditable="true">task 2 </p><img onclick="showModal1()" src="Assets/dots-3.png" class="dots" alt="" onclick="showModal1(this)"></div>
-                        <div class="task" spellcheck="false" draggable="true"><p contenteditable="true">task 3 </p><img onclick="showModal1()" src="Assets/dots-3.png" class="dots" alt="" onclick="showModal1(this)"></div>
+                <div class="list-name" contenteditable="true" spellcheck="false">Done</div>
+                    <div class="list-tasks">
+                        <div  class="task" spellcheck="false"><p contenteditable="true">task 1 </p><img onclick="showModal1()" src="Assets/dots-3.png" class="dots" alt="" onclick="showModal1(this)"></div>
+                        <div class="task" spellcheck="false"><p contenteditable="true">task 2 </p><img onclick="showModal1()" src="Assets/dots-3.png" class="dots" alt="" onclick="showModal1(this)"></div>
+                        <div class="task" spellcheck="false"><p contenteditable="true">task 3 </p><img onclick="showModal1()" src="Assets/dots-3.png" class="dots" alt="" onclick="showModal1(this)"></div>
                     </div>
                 <div class="add"><img src="Assets/plus.svg" alt="" class="plus" onclick="addTask(this.parentNode.previousElementSibling)"></div>
+            </div>
+            <div class="list">
+                <div class="add"><img src="Assets/plus.svg" alt="" class="plus" onclick="addCol(this.parentNode.parentNode)" id="plus-add"></div>
             </div>
         </section>
     </main>

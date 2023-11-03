@@ -1,3 +1,4 @@
+
 //those are global variables for the countf of number of tasks and number of tables.
 
 let countOfProjects = 1;
@@ -7,7 +8,6 @@ let countOfCurrentTasks = 3;
 let countOfCurrentColumns = 2;
 
 //end of global vars;
-
 
 function addCol(e) {
   countOfCurrentColumns++;
@@ -27,7 +27,7 @@ function addTask(e) {
   e.insertAdjacentHTML(
     "beforeend",
     `
-    <div class="task" id="t-${countOfCurrentTasks}" spellcheck="false" draggable="true" style="animation-name:pop-down;animation-duration:0.2s;animation-timing-function:linear;"><p contenteditable="true" class="task-text">New task </p><img src="Assets/dots-3.png" onclick="showModal1()" class="dots" alt="" onclick="showModal1(this)"></div>
+    <div class="task" id="t-${countOfCurrentTasks}" spellcheck="false" style="animation-name:pop-down;animation-duration:0.2s;animation-timing-function:linear;"><p contenteditable="true" class="task-text">New task </p><img src="Assets/dots-3.png" onclick="showModal1()" class="dots" alt="" onclick="showModal1(this)"></div>
     `
   );
 }
@@ -108,40 +108,9 @@ function HideSideBar() {
   ShowSideBar.style.display = "block";
   
 }; 
-let lists = document.querySelectorAll(".task"); 
-let boxes = document.querySelectorAll(".list-tasks"); 
-let drag = null;
-
-lists.forEach(list => {
-    list.addEventListener("dragstart", function(e) {
-        drag = list;
-        list.style.opacity = "0.5";
-    });
-
-    list.addEventListener("dragend", function() {
-        drag = null;
-        list.style.opacity = "1";
-    });
-
-    boxes.forEach(boxe => {
-        boxe.addEventListener("dragover", function(e) {
-            e.preventDefault();
-        });
-
-        boxe.addEventListener("dragleave", function() {
-            this.style.background = "#0b0423"; 
-        });
-
-        boxe.addEventListener("drop", function() {
-            if (drag) {
-                this.appendChild(drag);
-            }
-        });
-    });
-});
-
  function saveData(el) {
   let id = el.id;
   let num = id.match(/(\d+)/)[0];
   console.log(num);
  }
+
