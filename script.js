@@ -1,6 +1,6 @@
 //those are global variables for the countf of number of tasks and number of tables.
 
-let countOfTables = 1;
+let countOfProjects = 1;
 
 let countOfCurrentTasks = 3;
 
@@ -77,10 +77,10 @@ function showTools(){
 }
 // Ajouter fonction qui ajoute un table .
 function addTable() {
-  countOfTables++;
+  countOfProjects++;
   const Project = document.querySelector(".project-name");
   Project.insertAdjacentHTML( "afterend", ` 
-  <div class="project-name" spellcheck="false" onclick="saveData(this)" id="p-1">
+  <div class="project-name" spellcheck="false" onclick="saveData(this)" id="p-${countOfProjects}">
     <p class="projectName" contenteditable="true">Project...</p>
     <img src="Assets/dots-3.png" alt="" class="dots">
   </div> `)
