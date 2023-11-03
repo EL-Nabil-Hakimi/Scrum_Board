@@ -111,6 +111,5 @@ function HideSideBar() {
  function saveData(el) {
   let id = el.id;
   let num = id.match(/(\d+)/)[0];
-  console.log(num);
  }
 

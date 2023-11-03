@@ -21,9 +21,7 @@ function refresh() {
           animation: 150
         })
     });
-    console.log('done');
 }
 document.getElementById('plus-add').addEventListener('click',function () {
     setTimeout(refresh(),100);
-    console.log('test');
 })
