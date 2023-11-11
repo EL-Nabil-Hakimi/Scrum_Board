@@ -1,4 +1,45 @@
 
+//Code for sortable js
+
+
+let all = document.querySelectorAll('.list-tasks');
+all.forEach(element => {
+   Sortable.create(element, {
+     group: 'one',
+     animation: 150
+   })
+});
+let dash = document.querySelector('.dash');
+Sortable.create(dash, {
+ group: 'two',
+ animation: 150
+})
+function refresh() {
+    let dashes = document.querySelectorAll('.dash');
+    dashes.forEach(element => {
+        Sortable.create(element, {
+          group: 'two',
+          animation: 150
+        })
+    })
+    all = document.querySelectorAll('.list-tasks');
+    all.forEach(element => {
+        Sortable.create(element, {
+          group: 'one',
+          animation: 150
+        })
+    });
+}
+document.getElementById('plus-add').addEventListener('click',function () {
+    setTimeout(refresh(),100);
+})
+let projects = document.querySelector('.all-projects');
+Sortable.create(projects, {
+  group: 'three',
+  animation: 150
+  })
+;
+
 //those are global variables for the countf of number of tasks and number of tables.
 
 let countOfProjects = 1;
@@ -78,14 +119,49 @@ function showTools(){
 // Ajouter fonction qui ajoute un table .
 function addTable() {
   countOfProjects++;
-  const Project = document.querySelector(".project-name");
-  Project.insertAdjacentHTML( "afterend", ` 
+  const Project = document.querySelector(".all-projects");
+  Project.insertAdjacentHTML( "beforeend", ` 
   <div class="project-name" spellcheck="false" onclick="saveData(this)" id="p-${countOfProjects}">
     <p class="projectName" contenteditable="true">Project...</p>
     <img src="Assets/dots-3.png" alt="" class="dots">
-  </div> `)
-}
+  </div> `);
 
+  //add table content
+  document.querySelector('.dash').insertAdjacentHTML('afterend',`
+    <section class="dash" id="dash-${countOfProjects}" style="display:none;">
+      <div class="list">
+      <div class="list-name" contenteditable="true" spellcheck="false">To Do</div>
+          <div class="list-tasks">
+              <div class="task" spellcheck="false"><p contenteditable="true">task 1</p><img onclick="showModal1()" src="Assets/dots-3.png" class="dots" alt="" onclick="showModal1(this)"></div>
+              <div class="task" spellcheck="false"><p contenteditable="true">task 2</p><img onclick="showModal1()" src="Assets/dots-3.png" class="dots" alt="" onclick="showModal1(this)"></div>
+              <div class="task" spellcheck="false"><p contenteditable="true">task 3</p><img onclick="showModal1()" src="Assets/dots-3.png" class="dots" alt="" onclick="showModal1(this)"></div>
+          </div>
+      <div class="add"><img src="Assets/plus.svg" alt="" class="plus" onclick="addTask(this.parentNode.previousElementSibling)"></div>
+    </div>
+    <div class="list">
+      <div class="list-name" contenteditable="true" spellcheck="false">Doing</div>
+          <div class="list-tasks">
+              <div class="task" spellcheck="false"><p contenteditable="true">task 1</p><img onclick="showModal1()" src="Assets/dots-3.png" class="dots" alt="" onclick="showModal1(this)"></div>
+              <div class="task" spellcheck="false"><p contenteditable="true">task 2</p><img onclick="showModal1()" src="Assets/dots-3.png" class="dots" alt="" onclick="showModal1(this)"></div>
+              <div class="task" spellcheck="false"><p contenteditable="true">task 3</p><img onclick="showModal1()" src="Assets/dots-3.png" class="dots" alt="" onclick="showModal1(this)"></div>
+          </div>
+      <div class="add"><img src="Assets/plus.svg" alt="" class="plus" onclick="addTask(this.parentNode.previousElementSibling)"></div>
+    </div>
+    <div class="list">
+      <div class="list-name" contenteditable="true" spellcheck="false">Done</div>
+          <div class="list-tasks">
+              <div  class="task" spellcheck="false"><p contenteditable="true">task 1 </p><img onclick="showModal1()" src="Assets/dots-3.png" class="dots" alt="" onclick="showModal1(this)"></div>
+              <div class="task" spellcheck="false"><p contenteditable="true">task 2 </p><img onclick="showModal1()" src="Assets/dots-3.png" class="dots" alt="" onclick="showModal1(this)"></div>
+              <div class="task" spellcheck="false"><p contenteditable="true">task 3 </p><img onclick="showModal1()" src="Assets/dots-3.png" class="dots" alt="" onclick="showModal1(this)"></div>
+          </div>
+      <div class="add"><img src="Assets/plus.svg" alt="" class="plus" onclick="addTask(this.parentNode.previousElementSibling)"></div>
+    </div>
+    <div class="list">
+      <div class="add"><img src="Assets/plus.svg" alt="" class="plus" onclick="addCol(this.parentNode.parentNode)" id="plus-add"></div>
+    </div>
+  </section>
+  `)
+}
 // show sideBar In mobile
 
 function ShowSideBar() {
@@ -108,8 +184,15 @@ function HideSideBar() {
   ShowSideBar.style.display = "block";
   
 }; 
- function saveData(el) {
-  let id = el.id;
-  let num = id.match(/(\d+)/)[0];
+ function saveData(e) {
+  document.querySelector('.current').classList.remove('current');
+  e.classList.add('current');
+  let id = e.id;
+  id = id.split('-')[1];
+  document.querySelectorAll('.dash').forEach(element => {
+    element.style.display = 'none';
+  });
+  document.getElementById(`dash-${id}`).style.display = 'flex';
+  refresh();
  }
 
