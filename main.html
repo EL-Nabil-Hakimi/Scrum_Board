@@ -51,57 +51,57 @@
     </header>
     <main id="main">
         <!--Khalid's code-->
-        <section class="d-flex flex-row">
-            <div id="ShowSideBar" onclick="ShowSideBar()">
-                <img src="Assets/right.png" alt="" srcset="">
+        <section class="d-flex flex-row " id="sideBar">
+            <div class="arrow" onclick="showSidebar(this)">
+                <img src="Assets/caret.svg" alt="" class="caret">
             </div>
             <div class="sideBar-body">
-                <div id="HideSideBar" onclick="HideSideBar()">
-                    <img src="Assets/left.png" alt="" srcset="">
-                </div>
-                <div class="title" contenteditable="true" spellcheck="false">
+                <div class="title" spellcheck="false">
                     List of Projects
                 </div>
                 <div class="all-projects">
-                    <div class="project-name current" spellcheck="false" onclick="saveData(this)" id="p-1">
+                    <div class="project-name current" spellcheck="false" id="p-1" onclick="saveData(this)">
                         <p class="projectName" contenteditable="true">Project...</p>
-                        <img src="Assets/dots-3.png" alt="" class="dots">
+                        <img src="Assets/dots-3.png" alt="" class="dots" onclick="projectDots(this)">
                     </div>
                 </div>
-                <div class="add-project">
-                    Add An Other Project <img src="Assets/plus.svg" alt="" class="plus" onclick="addTable()">
+                <div class="add-project" onclick="addTable()">
+                    Add An Other Project <img src="Assets/plus.svg" alt="" class="plus">
                 </div>
             </div>
-            <div class="button">
-                <i class="fa-sharp fa-solid fa-circle-chevron-left fa-4x border rounded-circle" style="color: #272643;"></i>
-            </div> 
         </section>
         <!--end-->
         <section class="dash" id="dash-1">
             <div class="list">
                 <div class="list-name" contenteditable="true" spellcheck="false">To Do</div>
                     <div class="list-tasks">
-                        <div class="task" spellcheck="false"><p contenteditable="true">task 1</p><img onclick="showModal1()" src="Assets/dots-3.png" class="dots" alt="" onclick="showModal1(this)"></div>
-                        <div class="task" spellcheck="false"><p contenteditable="true">task 2</p><img onclick="showModal1()" src="Assets/dots-3.png" class="dots" alt="" onclick="showModal1(this)"></div>
-                        <div class="task" spellcheck="false"><p contenteditable="true">task 3</p><img onclick="showModal1()" src="Assets/dots-3.png" class="dots" alt="" onclick="showModal1(this)"></div>
+                        <div class="task" spellcheck="false">
+                            <p contenteditable="true">task 1</p>
+                            <img onclick="showModal1(this)" src="Assets/dots-3.png" class="dots" alt="" onclick="showModal1(this)">
+                            <div style="display: none;" class="task-data">
+                                <div class="date-data">
+
+                                </div>
+                                <div class="check-data">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        
                     </div>
                 <div class="add"><img src="Assets/plus.svg" alt="" class="plus" onclick="addTask(this.parentNode.previousElementSibling)"></div>
             </div>
             <div class="list">
                 <div class="list-name" contenteditable="true" spellcheck="false">Doing</div>
                     <div class="list-tasks">
-                        <div class="task" spellcheck="false"><p contenteditable="true">task 1</p><img onclick="showModal1()" src="Assets/dots-3.png" class="dots" alt="" onclick="showModal1(this)"></div>
-                        <div class="task" spellcheck="false"><p contenteditable="true">task 2</p><img onclick="showModal1()" src="Assets/dots-3.png" class="dots" alt="" onclick="showModal1(this)"></div>
-                        <div class="task" spellcheck="false"><p contenteditable="true">task 3</p><img onclick="showModal1()" src="Assets/dots-3.png" class="dots" alt="" onclick="showModal1(this)"></div>
+                        
                     </div>
                 <div class="add"><img src="Assets/plus.svg" alt="" class="plus" onclick="addTask(this.parentNode.previousElementSibling)"></div>
             </div>
             <div class="list">
                 <div class="list-name" contenteditable="true" spellcheck="false">Done</div>
                     <div class="list-tasks">
-                        <div  class="task" spellcheck="false"><p contenteditable="true">task 1 </p><img onclick="showModal1()" src="Assets/dots-3.png" class="dots" alt="" onclick="showModal1(this)"></div>
-                        <div class="task" spellcheck="false"><p contenteditable="true">task 2 </p><img onclick="showModal1()" src="Assets/dots-3.png" class="dots" alt="" onclick="showModal1(this)"></div>
-                        <div class="task" spellcheck="false"><p contenteditable="true">task 3 </p><img onclick="showModal1()" src="Assets/dots-3.png" class="dots" alt="" onclick="showModal1(this)"></div>
+
                     </div>
                 <div class="add"><img src="Assets/plus.svg" alt="" class="plus" onclick="addTask(this.parentNode.previousElementSibling)"></div>
             </div>
@@ -114,16 +114,16 @@
         <div class="d-flex justify-content-center align-items-center" style="width: 100%; height: 100vh;">
             <div class="container" id="contain-important">
                 <div class="row">
-                    <!-- Column 2 -->
+                    <!-- Column 1 -->
                     <div class="col-7">
                     <div id="HeaderModale">
-                        <h1><span>Task</span> Name</h1>
+                        <h1 id="taskName">Task Name</h1>
                         <img class="imgClose1" src="Assets/close.png" alt="Close"  onclick=" hideModal1()" >
                     </div>
                     <div class="row gap-2" style="margin-left: 0px; margin-top: 1em;" >
-                        <div class="col-3"></div>
-                        <div class="col-3"></div>
-                        <div class="col-3"></div>
+                        <div class="col-3" id="date-meter"></div>
+                        <div class="col-3" id="check-meter"></div>
+                        <div class="col-3" id="label-meter"></div>
                         <div class="col-3" id="MenuIcon">
                             <img src="Assets/menu.png" alt="" srcset="" onclick="showTools()" >
                         </div>
@@ -134,14 +134,13 @@
                         </div>
                         <textarea></textarea>
                     </div>
-                    <div class="Description">
+                    <div class="Description" id="checklists">
                         <div class="dv_CheckList">
                             <h3>CheckList</h3>
                             <img src="Assets/plus.png" alt="" srcset=""  onclick="addCheckList()" >
                         </div>
                         <div class="CheckList" id="CheckList">
-                            <div id="checklest1" ><input type="checkbox"><span contenteditable>Tache ...</span></div>
-                            
+                            <div><input type="checkbox" onchange="checkThis(this)"><span contenteditable="true" spellcheck="false">Tache ...</span></div>
                         </div>
                     </div>
                   </div>
@@ -157,7 +156,7 @@
                             <h3>Tools</h3>
                         </div>
                         <div class="col-4">
-                            <img class="ImgTools" src="Assets/tools.png">
+                            <img class="ImgTools" src="Assets/tools.png" class="modal-imgs">
                         </div>
                     </div>
                     <div class="MenuTools">
@@ -165,31 +164,45 @@
                             <h4>Date</h4>
                         </div>
                         <div>
-                            <img src="Assets/date.png" alt="" srcset="">
+                            <img src="Assets/date.svg" alt="" class="modal-imgs">
                         </div>
                     </div>
-                    <div class="MenuTools">
+                    <div class="MenuTools" onclick="addChecks()">
                         <div>
                             <h4>CheckList</h4>
                         </div>
                         <div>
-                            <img src="Assets/checklest.png" alt="" srcset="">
+                            <img src="Assets/checklist.svg" alt="" class="modal-imgs">
                         </div>
                     </div>
-                    <div class="MenuTools">
+                    <div class="MenuTools" onclick="showColors()">
                         <div>
                             <h4>Label</h4>
                         </div>
                         <div>
-                            <img src="Assets/label.png" alt="" srcset="">
+                            <img src="Assets/label.svg" alt="" class="modal-imgs">
                         </div>
                     </div>
-                    <div class="MenuTools" id="Delete">
+                    <div class="MenuTools color-closet">
+                        <div>
+                            <h4>Choose a color :</h4>
+                        </div>
+                        <input type="color" style="display: hidden;" id="label-color" onchange="changeLabelColor(this)">
+                    </div>
+                    <div class="color-ready color-closet">
+                        <div class="color-1" onclick="toThisColor(this)" id="rgb(42, 18, 100)"></div>
+                        <div class="color-2" onclick="toThisColor(this)" id="rgb(171, 48, 48)"></div>
+                        <div class="color-3" onclick="toThisColor(this)" id="#0091dc"></div>
+                        <div class="color-4" onclick="toThisColor(this)" id="rgb(36, 174, 77)"></div>
+                        <div class="color-5" onclick="toThisColor(this)" id="goldenrod"></div>
+                        <div class="color-6" onclick="toThisColor(this)" id="rgb(153, 36, 161)"></div>
+                    </div>
+                    <div class="MenuTools" id="Delete" onclick="deleteTask()">
                         <div>
                             <h4>Delete</h4>
                         </div>
                         <div>
-                            <img src="Assets/delete.png" alt="" srcset="">
+                            <img src="Assets/delete.png" alt="" class="modal-imgs" srcset="">
                         </div>
                     </div>
                 </div>            
